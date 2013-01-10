@@ -1,0 +1,29 @@
+parameters:
+#    mia_core.example.class: Mia\CoreBundle\Example
+
+services:
+    # Gallery
+    mia_core_gallery_admin:
+        class: Mia\CoreBundle\Admin\GalleryAdmin
+        arguments: [ @mia_core.gallery_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+
+    mia_core.gallery_manager:
+        class: %msi_cmf.manager.class%
+        arguments: [ Mia\CoreBundle\Entity\Gallery ]
+        parent: msi_cmf.manager
+
+    # GalleryImage
+    mia_core_gallery_image_admin:
+        class: Mia\CoreBundle\Admin\GalleryImageAdmin
+        arguments: [ @mia_core.gallery_image_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+
+    mia_core.gallery_image_manager:
+        class: %msi_cmf.manager.class%
+        arguments: [ Mia\CoreBundle\Entity\GalleryImage ]
+        parent: msi_cmf.manager

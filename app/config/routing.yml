@@ -1,3 +1,7 @@
+mia_user:
+    resource: "@MiaUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 mia_core:
     resource: "@MiaCoreBundle/Resources/config/routing.yml"
     prefix:   /

@@ -1,0 +1,3 @@
+mia_core_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: MiaCoreBundle:Default:index }

@@ -1,0 +1,7 @@
+parameters:
+#    mia_user.example.class: Mia\UserBundle\Example
+
+services:
+#    mia_user.example:
+#        class: %mia_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -24,7 +24,7 @@ class LoadSiteData extends AbstractFixture implements ContainerAwareInterface, O
     public function load(ObjectManager $manager)
     {
         $site = new Site();
-        $site->setName('unikspace');
+        $site->setName('mia');
         $site->setEnabled(true);
         $site->setIsDefault(true);
         $site->setLocale('fr');
@@ -32,7 +32,7 @@ class LoadSiteData extends AbstractFixture implements ContainerAwareInterface, O
             'fr',
         ));
         $this->siteManager->createTranslations($site, array('fr'));
-        $site->getTranslation()->setBrand('Unikspace');
+        $site->getTranslation()->setBrand('Mia Hébert');
         $this->addReference('site1', $site);
         $manager->persist($site);
         // FLUSH

@@ -26,26 +26,10 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
     {
         $this->manager = $manager;
 
-        $this->create(1, 'insert_cool_slogan_here', true);
+        $this->create(1, 'Accueil', true);
 
-        $this->create(2, 'Le concept d\'Uniktourspace', false);
-        $this->create(3, 'Tourisme spatial, rêve ou réalité?', false);
-        $this->create(4, 'Le futur des vols commerciaux', false);
-        $this->create(5, 'FAQ', false);
-        $this->create(6, 'La presse parle de nous', false);
-
-        $this->create(7, 'Description de la compagnie XCore Aerospace - SXC', false);
-        $this->create(8, 'Description de la navette LYNX-2', false);
-        $this->create(9, 'Devenez astronaute', false);
-
-        $this->create(10, 'Le(s) site(s) d\'entraînement / vol', false);
-        $this->create(11, 'Programme d\'entraînement', false);
-        $this->create(12, 'Le vol spatial', false);
-        $this->create(13, 'Le pilote (Rick Searfoss)', false);
-
-        $this->create(14, 'Sécurité', false);
-
-        $this->create(15, 'Les spatioports', false);
+        $this->create(2, 'Démarche', false);
+        $this->create(3, 'Contact', false);
 
         $this->manager->flush();
     }
@@ -55,7 +39,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $page = new Page();
         $page
             ->setHome($home)
-            ->setTemplate('UnikCoreBundle::layout.html.twig')
+            ->setTemplate('MiaCoreBundle::layout.html.twig')
         ;
         $this->pageManager->createTranslations($page, array('fr'));
         ;

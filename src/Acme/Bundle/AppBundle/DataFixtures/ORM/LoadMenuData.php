@@ -40,48 +40,10 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
         // FRONTEND MENU
 
         $root = $this->create('main');
-            $menu1 = $this->create('Uniktour & le voyage spatial', null, $root);
-                $this->create('Le concept d\'UniktourSpace', null, $menu1, 'page2');
-                $this->create('Tourisme spatial, rêve ou réalité?', null, $menu1, 'page3');
-                $this->create('Le futur des vols commerciaux', null, $menu1, 'page4');
-                $this->create('FAQ', null, $menu1, 'page5');
-                $this->create('La presse parle de nous', null, $menu1, 'page6');
-            $menu2 = $this->create('Le vol suborbital', null, $root);
-                $this->create('Description de la compagnie XCore Aerospace - SXC', null, $menu2, 'page7');
-                $this->create('Description de la navette LYNX-2', null, $menu2, 'page8');
-                $this->create('Devenez astronaute', null, $menu2, 'page9');
-            $menu3 = $this->create('L\'experience', null, $root);
-                $this->create('Le(s) site(s) d\'entraînement / vol', null, $menu3, 'page10');
-                $this->create('Programme d\'entraînement', null, $menu3, 'page11');
-                $this->create('Le vol spatial', null, $menu3, 'page12');
-                $this->create('Le pilote (Rick Searfoss)', null, $menu3, 'page13');
-            $this->create('Sécurité', null, $root, 'page14');
-            $this->create('Contact', null, $root);
-
-        // footer left
-
-        $root = $this->create('footer_left');
-            $menu1 = $this->create('Uniktour & le voyage spatial', null, $root);
-                $this->create('&bull; Le concept d\'UniktourSpace', null, $menu1, 'page2');
-                $this->create('&bull; Tourisme spatial, rêve ou réalité?', null, $menu1, 'page3');
-                $this->create('&bull; Le futur des vols commerciaux', null, $menu1, 'page4');
-                $this->create('&bull; FAQ', null, $menu1, 'page5');
-                $this->create('&bull; La presse parle de nous', null, $menu1, 'page6');
-            $menu2 = $this->create('Le vol suborbital', null, $root);
-                $this->create('&bull; Description de la compagnie XCore Aerospace - SXC', null, $menu2, 'page7');
-                $this->create('&bull; Description de la navette LYNX-2', null, $menu2, 'page8');
-                $this->create('&bull; Devenez astronaute', null, $menu2, 'page9');
-
-        // footer right
-
-        $root = $this->create('footer_right');
-            $menu3 = $this->create('L\'experience', null, $root);
-                $this->create('&bull; Le(s) site(s) d\'entraînement / vol', null, $menu3, 'page10');
-                $this->create('&bull; Programme d\'entraînement', null, $menu3, 'page11');
-                $this->create('&bull; Le vol spatial (Doc 3)', null, $menu3, 'page12');
-                $this->create('&bull; Le pilote (Rick Searfoss)', null, $menu3, 'page13');
-            $this->create('Sécurité', null, $root, 'page14');
-            $this->create('Contact', null, $root);
+            $this->create('Accueil', null, $root, 'page1');
+            $this->create('Démarche', null, $root, 'page2');
+            $this->create('Portfolio', null, $root);
+            $this->create('Contact', null, $root, 'page3');
 
         $this->manager->flush();
     }
