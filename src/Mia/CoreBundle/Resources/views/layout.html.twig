@@ -31,15 +31,15 @@ $(document).on('ready', function() {
         <div class="clearfix"></div>
         <div class="menu-wrapper">{{ knp_menu_render('MiaCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3}) }}</div>
         <div class="clearfix"></div>
+        <hr>
+        <div class="clearfix"></div>
     </div>
     <div id="content">
-        <div class="clearfix"></div>
-        <hr>
         {% if page.id and page.home != true %}<h2>{{ block('title') }}</h2>{% endif %}
         {{ block('page_content') }}
-        <hr>
     </div>
     <div id="footer">
+        <hr>
         <div class="menu-wrapper">{{ knp_menu_render('MiaCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3}) }}</div>
         <div class="clearfix"></div>
         <p style="margin-top: 20px;"><small>&copy; {{ 'now'|date('Y') }} Mia Hébert.</small></p>

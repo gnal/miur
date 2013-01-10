@@ -50,7 +50,7 @@ class GalleryImage implements UploadableInterface
     public function processFile(\SplFileInfo $file)
     {
         $cutter = new Cutter;
-        $cutter->setFile($file)->resize(460, 260)->save();
+        $cutter->setFile($file)->resize(150, 150)->save($file->getPath().'/t_'.$file->getFilename());
     }
 
     public function getAllowedExt()

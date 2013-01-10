@@ -20,7 +20,7 @@
     {% if loop.index == 1 or loop.index % 3 == 1 %}<div class="row-fluid">{% endif %}
     <div class="span4">
         <div class="img-polaroid" {% if loop.index != count and loop.index != count - 1 and loop.index != count - 2 %}style="margin-bottom: 20px;"{% endif %}>
-            <a href="#" style="display: block; border: 1px solid #999;"><img src="{{ image.pathname }}" alt="0"></a>
+            <a href="#" style="display: block; border: 1px solid #999;"><img src="{{ image.pathname('t_') }}" alt="0"></a>
         </div>
     </div>
     {% if loop.index == count or loop.index % 3 == 0 %}</div>{% endif %}
