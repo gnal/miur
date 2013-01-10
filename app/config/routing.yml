@@ -1,5 +1,5 @@
-unik_core:
-    resource: "@UnikCoreBundle/Resources/config/routing.yml"
+mia_core:
+    resource: "@MiaCoreBundle/Resources/config/routing.yml"
     prefix:   /
 
 fos_user_security:

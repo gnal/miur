@@ -1,7 +1,0 @@
-parameters:
-#    unik_core.example.class: Unik\CoreBundle\Example
-
-services:
-#    unik_core.example:
-#        class: %unik_core.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

@@ -68,19 +68,19 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Unik\UserBundle\Entity\User
+    user_class: Mia\UserBundle\Entity\User
     group:
         group_class: Msi\Bundle\UserBundle\Entity\Group
 
 msi_cmf:
     page:
         layouts:
-            'UnikCoreBundle::layout.html.twig': 'Default'
+            'MiaCoreBundle::layout.html.twig': 'Default'
     block:
         actions:
-            'UnikCoreBundle::layout.html.twig': 'Default'
+            'MiaCoreBundle::layout.html.twig': 'Default'
         templates:
-            'UnikCoreBundle::layout.html.twig': 'Default'
+            'MiaCoreBundle::layout.html.twig': 'Default'
         slots:
             content: Content
             sidebar: Sidebar

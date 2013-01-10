@@ -1,3 +1,0 @@
-unik_core_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: UnikCoreBundle:Default:index }
