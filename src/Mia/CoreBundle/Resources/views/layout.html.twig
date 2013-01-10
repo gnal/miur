@@ -32,7 +32,6 @@ $(document).on('ready', function() {
         <div class="menu-wrapper">{{ knp_menu_render('MiaCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3}) }}</div>
         <div class="clearfix"></div>
         <hr>
-        <div class="clearfix"></div>
     </div>
     <div id="content">
         {% if page.id and page.home != true %}<h2>{{ block('title') }}</h2>{% endif %}

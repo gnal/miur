@@ -32,6 +32,31 @@ class GalleryImage implements UploadableInterface
     protected $published;
 
     /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $title;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $medium;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $size;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $year;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    protected $description;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Gallery", inversedBy="images")
      */
     protected $gallery;
@@ -56,6 +81,66 @@ class GalleryImage implements UploadableInterface
     public function getAllowedExt()
     {
         return ['png', 'jpg', 'gif', 'jpeg'];
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getMedium()
+    {
+        return $this->medium;
+    }
+
+    public function setMedium($medium)
+    {
+        $this->medium = $medium;
+
+        return $this;
+    }
+
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    public function setSize($size)
+    {
+        $this->size = $size;
+
+        return $this;
+    }
+
+    public function getYear()
+    {
+        return $this->year;
+    }
+
+    public function setYear($year)
+    {
+        $this->year = $year;
+
+        return $this;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
     }
 
     public function getPosition()

@@ -26,9 +26,18 @@ class GalleryImageAdmin extends Admin
 
     public function buildForm(FormBuilder $builder)
     {
+        $years = range(date('Y'), 1988);
+
         $builder
             ->add('published')
             ->add('file', 'file')
+            ->add('title')
+            ->add('medium', 'choice', ['choices' => [
+                'dada' => 'dada',
+            ]])
+            ->add('size')
+            ->add('year', 'choice', ['choices' => $years])
+            ->add('description', 'textarea', ['attr' => ['class' => 'tinymce']])
         ;
     }
 }
