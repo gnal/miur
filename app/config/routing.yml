@@ -1,0 +1,38 @@
+unik_core:
+    resource: "@UnikCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+msi_cmf_routing:
+    resource: "@MsiCmfBundle/Resources/config/routing/routing.yml"
+    prefix: /{_locale}/admin
+
+msi_cmf_loader:
+    resource: .
+    type: msi_cmf
+
+msi_page_home:
+    pattern: /
+    defaults: { _controller: MsiCmfBundle:Page:show }
+
+msi_page_show:
+    pattern: /{slug}
+    defaults: { _controller: MsiCmfBundle:Page:show, slug: ~ }
