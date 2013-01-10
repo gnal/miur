@@ -9,6 +9,8 @@ services:
         parent: msi_cmf.admin
         tags:
             - { name: msi.admin }
+        calls:
+            - [ addChild, [ @mia_core_gallery_image_admin ] ]
 
     mia_core.gallery_manager:
         class: %msi_cmf.manager.class%
@@ -22,6 +24,8 @@ services:
         parent: msi_cmf.admin
         tags:
             - { name: msi.admin }
+        calls:
+            - [ setParent, [ @mia_core_gallery_admin ] ]
 
     mia_core.gallery_image_manager:
         class: %msi_cmf.manager.class%

@@ -1,0 +1,28 @@
+{% extends 'MiaCoreBundle::layout.html.twig' %}
+
+{% block title %}Portfolio{% endblock title %}
+
+{% block content %}
+<h2 style="text-align: center;">{{ block('title') }}</h2>
+<div class="menu-wrapper">
+<ul class="menu" style="margin-bottom: 20px;">
+{% for gallery in galleries %}
+    <li {% if app.request.query.get('p') == gallery.id %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list', {'p': gallery.id}) }}">{{ gallery.name }}</a></li>
+{% endfor %}
+    <li {% if app.request.query.get('p') == null %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list') }}">Tous</a></li>
+</ul>
+</div>
+
+<div class="clearfix"></div>
+
+{% set count = images|length %}
+{% for image in images %}
+    {% if loop.index == 1 or loop.index % 3 == 1 %}<div class="row-fluid">{% endif %}
+    <div class="span4">
+        <div class="img-polaroid" {% if loop.index != count and loop.index != count - 1 and loop.index != count - 2 %}style="margin-bottom: 20px;"{% endif %}>
+            <a href="#" style="display: block; border: 1px solid #999;"><img src="{{ image.pathname }}" alt="0"></a>
+        </div>
+    </div>
+    {% if loop.index == count or loop.index % 3 == 0 %}</div>{% endif %}
+{% endfor %}
+{% endblock content %}

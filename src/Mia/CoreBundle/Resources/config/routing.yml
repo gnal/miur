@@ -1,3 +1,3 @@
-mia_core_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: MiaCoreBundle:Default:index }
+mia_core_gallery_image_list:
+    pattern:  /portfolio
+    defaults: { _controller: MiaCoreBundle:GalleryImage:list }

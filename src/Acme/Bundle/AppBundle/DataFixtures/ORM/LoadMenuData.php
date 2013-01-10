@@ -42,7 +42,7 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
         $root = $this->create('main');
             $this->create('Accueil', null, $root, 'page1');
             $this->create('Démarche', null, $root, 'page2');
-            $this->create('Portfolio', null, $root);
+            $this->create('Portfolio', '@mia_core_gallery_image_list', $root);
             $this->create('Contact', null, $root, 'page3');
 
         $this->manager->flush();

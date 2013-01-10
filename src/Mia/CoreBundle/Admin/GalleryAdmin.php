@@ -11,8 +11,8 @@ class GalleryAdmin extends Admin
     public function buildGrid(GridBuilder $builder)
     {
         $builder
+            ->add('published', 'boolean')
             ->add('name')
-            ->add('updatedAt', 'date')
             ->add('', 'action')
         ;
     }
@@ -20,6 +20,7 @@ class GalleryAdmin extends Admin
     public function buildForm(FormBuilder $builder)
     {
         $builder
+            ->add('published')
             ->add('name')
         ;
     }
