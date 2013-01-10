@@ -18,8 +18,8 @@ $(document).on('ready', function() {
     $.supersized({
         slides: [ {image : '/uploads/images/bg.jpg', title : 'Image Credit: Mia Hébert'} ]
     });
-    $('#supersized img').on('load', function() {
-        $('#container').show();
+    $('div#supersized img').on('load', function() {
+        $('div#container').removeClass('hide');
     });
 });
 </script>
@@ -27,7 +27,7 @@ $(document).on('ready', function() {
 {% endblock js %}
 
 {% block body %}
-<div id="container" class="container" style="display: none;">
+<div id="container" class="container hide">
     <div id="header">
         <h1 id="logo"><a href="{{ path('msi_page_home') }}">Mia Hébert</a></h1>
         <p style="margin: -10px 0 30px; color: #fff;">artiste</p>
