@@ -65,8 +65,7 @@ ul.menu > li > a:hover, ul.menu > li.current > a {
     background: #000;
     padding: 0 30px;
     border-radius: 20em;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin: 80px auto;
 }
 
 #header {
