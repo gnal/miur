@@ -82,5 +82,4 @@ msi_cmf:
         templates:
             'MiaCoreBundle::layout.html.twig': 'Default'
         slots:
-            content: Content
-            sidebar: Sidebar
+            content: Contenu
