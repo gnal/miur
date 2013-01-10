@@ -61,9 +61,9 @@ ul.menu > li > a:hover, ul.menu > li.current > a {
     color: #fff;
 }
 
-#supersized-loader {
+/*#supersized-loader {
     display: none;
-}
+}*/
 
 #container {
     background: #000;
