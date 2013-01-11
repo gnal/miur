@@ -20,7 +20,7 @@
     {% if loop.index == 1 or loop.index % 3 == 1 %}<div class="row-fluid">{% endif %}
     <div class="span4">
         <div class="img-polaroid" {% if loop.index != count and loop.index != count - 1 and loop.index != count - 2 %}style="margin-bottom: 20px;"{% endif %}>
-            <a class="fancybox" rel="gallery1" href="{{ image.pathname }}" title="
+            <a class="fancybox" rel="gallery1" href="{{ image.pathname }}" caption="
                 <p>
                     <strong style='color: #fff;'>{{ image.title }}</strong>
                     <br>
@@ -31,7 +31,7 @@
                     <small>{{ image.year }}</small>
                 </p>
                 {{ image.description }}
-            "><img src="{{ image.pathname('t_') }}" alt="0"></a>
+            "><img style="border: 1px solid #454545;" src="{{ image.pathname('t_') }}" alt="0"></a>
         </div>
     </div>
     {% if loop.index == count or loop.index % 3 == 0 %}</div>{% endif %}
@@ -49,6 +49,9 @@
 <script>
 $(document).ready(function() {
     $('.fancybox').fancybox({
+        beforeLoad: function() {
+            this.title = $(this.element).attr('caption');
+        },
         fitToView: false,
         helpers: {
             overlay: null,
