@@ -38,6 +38,7 @@ class MenuBuilder extends ContainerAware
             }
         }
         $this->removeUnpublished($menu);
+        $this->findCurrent($menu);
 
         return $menu;
     }
@@ -72,6 +73,7 @@ class MenuBuilder extends ContainerAware
         if ($pos = strrpos($requestUri, '?')) {
             $requestUri = substr($requestUri, 0, $pos);
         }
+
         foreach ($node->getChildren() as $child) {
             $menuUri = $child->getUri();
             if ($menuUri === $requestUri) {

@@ -4,6 +4,7 @@ namespace Mia\CoreBundle\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class GalleryImageController extends ContainerAware
 {
@@ -19,6 +20,8 @@ class GalleryImageController extends ContainerAware
                     $where['a.gallery'] = $gallery;
                 }
             }
+        } else {
+            return new RedirectResponse($this->container->get('router')->generate('mia_core_gallery_image_list', ['p' => 1]));
         }
 
         $images = $this->container->get('mia_core.gallery_image_manager')->getFindByQueryBuilder($where, [], ['a.position' => 'ASC'])->getQuery()->execute();
