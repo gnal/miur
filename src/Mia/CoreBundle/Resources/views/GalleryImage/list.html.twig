@@ -9,7 +9,7 @@
 {% for gallery in galleries %}
     <li {% if app.request.query.get('p') == gallery.id %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list', {'p': gallery.id}) }}">{{ gallery.name }}</a></li>
 {% endfor %}
-    <li {% if app.request.query.get('p') == null %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list') }}">Tous</a></li>
+    {#<li {% if app.request.query.get('p') == null %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list') }}">Tous</a></li>#}
 </ul>
 </div>
 
@@ -54,7 +54,9 @@ $(document).ready(function() {
         },
         fitToView: false,
         helpers: {
-            overlay: null,
+            overlay: {
+                fixed: false
+            },
             title: {
                 type: 'inside'
             }
