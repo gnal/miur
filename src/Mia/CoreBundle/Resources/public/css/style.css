@@ -82,7 +82,7 @@ ul.menu > li > a:hover, ul.menu > li.current > a {
     min-height: 140px;
 }
 
-#content > p:first-child {
+#content > p:first-child, #content > blockquote:first-child {
     margin-top: 10px;
 }
 
