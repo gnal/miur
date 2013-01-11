@@ -26,7 +26,10 @@ class GalleryImageAdmin extends Admin
 
     public function buildForm(FormBuilder $builder)
     {
-        $years = range(date('Y'), 1988);
+        $years = [];
+        foreach (range(date('Y'), 1988) as $year) {
+            $years[$year] = $year;
+        }
 
         $builder
             ->add('published')
