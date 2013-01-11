@@ -14,14 +14,14 @@ class GalleryImageController extends ContainerAware
 
         $where = ['a.published' => true];
 
-        if ($id = $request->query->get('p')) {
+        if ($id = $request->query->get('p', 1)) {
             foreach ($galleries as $gallery) {
                 if ($id == $gallery->getId()) {
                     $where['a.gallery'] = $gallery;
                 }
             }
         } else {
-            return new RedirectResponse($this->container->get('router')->generate('mia_core_gallery_image_list', ['p' => 1]));
+            // return new RedirectResponse($this->container->get('router')->generate('mia_core_gallery_image_list', ['p' => 1]));
         }
 
         $images = $this->container->get('mia_core.gallery_image_manager')->getFindByQueryBuilder($where, [], ['a.position' => 'ASC'])->getQuery()->execute();
