@@ -35,9 +35,7 @@ class GalleryImageAdmin extends Admin
             ->add('published')
             ->add('file', 'file')
             ->add('title')
-            ->add('medium', 'choice', ['choices' => [
-                'dada' => 'dada',
-            ]])
+            ->add('medium')
             ->add('size')
             ->add('year', 'choice', ['choices' => $years])
             ->add('description', 'textarea', ['attr' => ['class' => 'tinymce']])
