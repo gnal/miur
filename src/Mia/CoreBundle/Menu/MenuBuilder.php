@@ -73,12 +73,12 @@ class MenuBuilder extends ContainerAware
         if ($pos = strrpos($requestUri, '?')) {
             $requestUri = substr($requestUri, 0, $pos);
         }
-
+        var_dump($requestUri);
         foreach ($node->getChildren() as $child) {
             $menuUri = $child->getUri();
+            var_dump($menuUri);
             if ($menuUri === $requestUri) {
                 $child->setCurrent(true);
-                $this->sidebarMenu = $child->getParent();
             } else {
                 $child->setCurrent(false);
                 $this->findCurrent($child);
