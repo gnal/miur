@@ -22,13 +22,13 @@
         <div class="img-polaroid" {% if loop.index != count and loop.index != count - 1 and loop.index != count - 2 %}style="margin-bottom: 20px;"{% endif %}>
             <a class="fancybox" rel="gallery1" href="{{ image.pathname }}" title="
                 <p>
-                    <strong>{{ image.title }}</strong>
+                    <strong style='color: #fff;'>{{ image.title }}</strong>
                     <br>
-                    {{ image.medium }}
+                    <small>{{ image.medium }}</small>
                     <br>
-                    {{ image.size }}
+                    <small>{{ image.size }}</small>
                     <br>
-                    {{ image.year }}
+                    <small>{{ image.year }}</small>
                 </p>
                 {{ image.description }}
             "><img src="{{ image.pathname('t_') }}" alt="0"></a>
