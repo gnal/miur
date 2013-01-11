@@ -21,7 +21,7 @@ class GalleryImageController extends ContainerAware
             }
         }
 
-        $images = $this->container->get('mia_core.gallery_image_manager')->getFindByQueryBuilder($where)->getQuery()->execute();
+        $images = $this->container->get('mia_core.gallery_image_manager')->getFindByQueryBuilder($where, [], ['a.position' => 'ASC'])->getQuery()->execute();
 
         return $this->container->get('templating')->renderResponse('MiaCoreBundle:GalleryImage:list.html.twig', ['galleries' => $galleries, 'images' => $images]);
     }
