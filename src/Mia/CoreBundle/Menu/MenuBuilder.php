@@ -73,10 +73,11 @@ class MenuBuilder extends ContainerAware
         if ($pos = strrpos($requestUri, '?')) {
             $requestUri = substr($requestUri, 0, $pos);
         }
-        var_dump($requestUri);
         foreach ($node->getChildren() as $child) {
             $menuUri = $child->getUri();
-            var_dump($menuUri);
+            if ($pos = strrpos($menuUri, '?')) {
+                $menuUri = substr($menuUri, 0, $pos);
+            }
             if ($menuUri === $requestUri) {
                 $child->setCurrent(true);
             } else {
