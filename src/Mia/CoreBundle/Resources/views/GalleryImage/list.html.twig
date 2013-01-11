@@ -31,7 +31,7 @@
                     <small>{{ image.year }}</small>
                 </p>
                 {{ image.description }}
-            "><img onload="nl(this);" style="display: none; border: 1px solid #454545;" src="{{ image.pathname('t_') }}" alt="0"></a>
+            "><img class="hide" onload="nl(this);" style="border: 1px solid #454545;" src="{{ image.pathname('t_') }}" alt="0"></a>
         </div>
     </div>
     {% if loop.index == count or loop.index % 3 == 0 %}</div>{% endif %}
