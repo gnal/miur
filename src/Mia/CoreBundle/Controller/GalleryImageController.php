@@ -16,7 +16,7 @@ class GalleryImageController extends ContainerAware
         if ($id = $request->query->get('p')) {
             foreach ($galleries as $gallery) {
                 if ($id == $gallery->getId()) {
-                    $where = ['a.gallery' => $gallery];
+                    $where['a.gallery'] = $gallery;
                 }
             }
         }
