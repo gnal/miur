@@ -7,7 +7,7 @@
 <div class="menu-wrapper">
 <ul class="menu" style="margin-bottom: 20px;">
 {% for gallery in galleries %}
-    <li {% if app.request.query.get('p') == gallery.id %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list', {'p': gallery.id}) }}">{{ gallery.name }}</a></li>
+    <li {% if app.request.query.get('p', 1) == gallery.id %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list', {'p': gallery.id}) }}">{{ gallery.name }}</a></li>
 {% endfor %}
     {#<li {% if app.request.query.get('p') == null %}class="current"{% endif %}><a href="{{ path('mia_core_gallery_image_list') }}">Tous</a></li>#}
 </ul>
