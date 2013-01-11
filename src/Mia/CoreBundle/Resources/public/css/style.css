@@ -82,6 +82,10 @@ ul.menu > li > a:hover, ul.menu > li.current > a {
     min-height: 140px;
 }
 
+#content > p:first-child {
+    margin-top: 10px;
+}
+
 #footer {
     height: 141px;
     padding-bottom: 40px;
