@@ -18,6 +18,7 @@ class GalleryImageController extends ContainerAware
             foreach ($galleries as $gallery) {
                 if ($id == $gallery->getId()) {
                     $where['a.gallery'] = $gallery;
+                    $currentGallery = $gallery;
                 }
             }
         } else {
@@ -26,6 +27,6 @@ class GalleryImageController extends ContainerAware
 
         $images = $this->container->get('mia_core.gallery_image_manager')->getFindByQueryBuilder($where, [], ['a.position' => 'ASC'])->getQuery()->execute();
 
-        return $this->container->get('templating')->renderResponse('MiaCoreBundle:GalleryImage:list.html.twig', ['galleries' => $galleries, 'images' => $images]);
+        return $this->container->get('templating')->renderResponse('MiaCoreBundle:GalleryImage:list.html.twig', ['currentGallery' => $currentGallery, 'galleries' => $galleries, 'images' => $images]);
     }
 }
