@@ -3,16 +3,16 @@
 namespace Mia\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Msi\DoctrineBehaviors\Uploadable\UploadableInterface;
-use Msi\Bundle\CmfBundle\Tools\Cutter;
+use Msi\CmfBundle\Doctrine\Extension\Uploadable\UploadableInterface;
+use Msi\CmfBundle\Tools\Cutter;
 
 /**
  * @ORM\Entity
  */
 class GalleryImage implements UploadableInterface
 {
-    use \Msi\DoctrineBehaviors\Uploadable\Traits\UploadableEntity;
-    use \Msi\DoctrineBehaviors\Timestampable\Traits\TimestampableEntity;
+    use \Msi\CmfBundle\Doctrine\Extension\Uploadable\Traits\UploadableEntity;
+    use \Msi\CmfBundle\Doctrine\Extension\Timestampable\Traits\TimestampableEntity;
 
     /**
      * @ORM\Column(type="integer")

@@ -5,7 +5,7 @@ html {
 body {
     color: #999;
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 h1 {
@@ -52,7 +52,7 @@ ul.menu > li {
 
 ul.menu > li > a {
     display: block;
-    padding: 0 15px;
+    padding: 0 10px;
     color: #999;
     text-transform: uppercase;
 }
@@ -64,7 +64,7 @@ ul.menu > li > a:hover, ul.menu > li.current > a {
 #container {
     background: #000;
     padding: 0 30px;
-    border-radius: 20em;
+    border-radius: 22em;
     margin: 60px auto;
 }
 
@@ -80,6 +80,15 @@ ul.menu > li > a:hover, ul.menu > li.current > a {
 
 #content > p:first-child, #content > blockquote:first-child {
     margin-top: 10px;
+}
+
+.fancybox-wrap {
+    width: 630px !important;
+}
+
+.fancybox-inner {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .fancybox {

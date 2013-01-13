@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Msi\Bundle\CmfBundle\Entity\Page;
+use Msi\CmfBundle\Entity\Page;
 
 class LoadPageData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {

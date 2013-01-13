@@ -20,7 +20,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Msi\Bundle\UserBundle\Entity\Group")
+     * @ORM\ManyToMany(targetEntity="Msi\UserBundle\Entity\Group")
      */
     protected $groups;
 

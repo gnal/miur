@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Msi\Bundle\CmfBundle\Entity\Menu;
+use Msi\CmfBundle\Entity\Menu;
 
 class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {
@@ -23,7 +23,7 @@ class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, O
     public function load(ObjectManager $manager)
     {
         $this->manager = $manager;
-        $transClass = 'Msi\Bundle\CmfBundle\Entity\MenuTranslation';
+        $transClass = 'Msi\CmfBundle\Entity\MenuTranslation';
 
         // ADMIN MENU
 

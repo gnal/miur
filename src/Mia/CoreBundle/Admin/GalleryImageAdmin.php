@@ -2,8 +2,8 @@
 
 namespace Mia\CoreBundle\Admin;
 
-use Msi\Bundle\CmfBundle\Admin\Admin;
-use Msi\Bundle\CmfBundle\Grid\GridBuilder;
+use Msi\CmfBundle\Admin\Admin;
+use Msi\CmfBundle\Grid\GridBuilder;
 use Symfony\Component\Form\FormBuilder;
 
 class GalleryImageAdmin extends Admin
