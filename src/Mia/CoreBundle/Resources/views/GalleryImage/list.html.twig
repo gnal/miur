@@ -25,12 +25,9 @@
             <a class="fancybox" rel="gallery1" href="{{ image.pathname }}" caption="
                 <p>
                     <strong style='color: #fff;'>{{ image.title }}</strong>
-                    <br>
-                    <small>{{ image.medium }}</small>
-                    <br>
-                    <small>{{ image.size }}</small>
-                    <br>
-                    <small>{{ image.year }}</small>
+                    {% if image.medium %}<br><small>{{ image.medium }}</small>{% endif %}
+                    {% if image.size %}<br><small>{{ image.size }}</small>{% endif %}
+                    <br><small>{{ image.year }}</small>
                 </p>
                 {{ image.description }}
             "><img class="hide" onload="nl(this);" style="border: 1px solid #454545;" src="{{ image.pathname('t_') }}" alt="0"></a>
