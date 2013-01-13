@@ -26,4 +26,10 @@ class Block extends BaseBlock
      * @ORM\OneToMany(targetEntity="BlockTranslation", mappedBy="object", cascade={"persist", "remove"})
      */
     protected $translations;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Msi\UserBundle\Entity\Group")
+     * )
+     */
+    protected $whitelist;
 }
