@@ -124,3 +124,8 @@ ul.menu > li > a:hover, ul.menu > li.current > a {
     padding: 0;
     padding: 0 5px;
 }
+
+.lead {
+    font-size: 17.5px;
+
+}
