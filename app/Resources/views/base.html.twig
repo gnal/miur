@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="keywords" content="{% block meta_keywords %}{% endblock meta_keywords %}">
         <meta name="description" content="{% block meta_description %}{% endblock meta_description %}">
-        <title>{% block before_title %}{% endblock before_title %}{% block title %}{% endblock %} - {% block brand %}{% endblock brand %}</title>
+        <title>{% block before_title %}{% endblock before_title %}{% if page.home != true %}{{ block('title') }} - {% endif %}{% block brand %}{% endblock brand %}</title>
         {% block css %}{% endblock css %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
