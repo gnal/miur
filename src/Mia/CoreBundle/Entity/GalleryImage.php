@@ -4,12 +4,13 @@ namespace Mia\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Msi\CmfBundle\Doctrine\Extension\Uploadable\UploadableInterface;
+use Msi\CmfBundle\Doctrine\Extension\Timestampable\TimestampableInterface;
 use Msi\CmfBundle\Tools\Cutter;
 
 /**
  * @ORM\Entity
  */
-class GalleryImage implements UploadableInterface
+class GalleryImage implements UploadableInterface, TimestampableInterface
 {
     use \Msi\CmfBundle\Doctrine\Extension\Uploadable\Traits\UploadableEntity;
     use \Msi\CmfBundle\Doctrine\Extension\Timestampable\Traits\TimestampableEntity;
